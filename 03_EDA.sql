@@ -1,3 +1,7 @@
+-- File: 03_eda.sql
+-- Project: AI Job Market SQL Analysis
+-- Description: Exploratory Data Analysis (EDA)
+
 use Data_Analyst_Project
 select * from AI_job_market_cleaned
 
@@ -42,4 +46,5 @@ select * from AI_job_market_cleaned
  from AI_job_market_cleaned
  group by country ,work_mode
  order by work_mode,Total_Jobs DESC
+
 
