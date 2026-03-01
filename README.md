@@ -26,6 +26,58 @@ The objective is to extract business insights, identify trends, and understand s
 05_query_optimization.
 
 ---
+# 🤖 AI Job Market SQL Analysis  
+
+<p align="center">
+  <img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="70"/>
+  <img src="https://img.icons8.com/color/96/sql.png" width="70"/>
+</p>
+
+---
+
+## 📌 Project Overview
+
+This project analyzes the AI Job Market dataset using **SQL Server**.  
+The analysis includes data cleaning, exploratory data analysis (EDA), business insights, and performance optimization using indexes.
+
+---
+
+## 🛠 Tools Used
+- 🗄 Microsoft SQL Server  
+- 📊 SQL (T-SQL)  
+- 📁 CSV Dataset  
+
+---
+
+## 📊 Key Analysis Results
+
+---
+
+### 💰 Salary Statistics (Max, Min, Average)
+
+<p align="center">
+  <img src="salary_stats.png" width="700"/>
+</p>
+
+🔎 Insight:
+- Identified highest and lowest salary offered.
+- Calculated average salary across all roles.
+- Helped understand overall salary distribution in AI job market.
+
+---
+
+### 🚀 Top Highest Paying Job Roles
+
+<p align="center">
+  <img src="top_job_roles.png" width="700"/>
+</p>
+
+🔎 Insight:
+- Identified top paying AI job roles.
+- Compared role-based salary distribution.
+- Highlighted high-demand, high-paying positions.
+
+---
 
 ## 📈 Key Insights
 - Identified top-paying AI roles
