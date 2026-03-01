@@ -1,0 +1,13 @@
+-- 01_Create_And_Import_Data.sql
+-- Importing AI Job Market Dataset
+
+use Data_Analyst_Project
+
+BULK INSERT AI_job_market
+FROM 'C:\Users\Radhika Neha\Downloads\global_ai_jobs.csv'
+ WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+     );
