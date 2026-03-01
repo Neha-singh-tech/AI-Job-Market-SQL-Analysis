@@ -1,3 +1,8 @@
+![SQL](https://img.shields.io/badge/SQL-Server-blue)
+![Project](https://img.shields.io/badge/Project-Data%20Analysis-brightgreen)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![Made By](https://img.shields.io/badge/Made%20By-Neha%20Singh-purple)
+
 # 📊 AI Job Market SQL Analysis
 
 ## 📌 Project Overview
