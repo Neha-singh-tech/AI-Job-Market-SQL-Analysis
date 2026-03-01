@@ -19,11 +19,11 @@ The objective is to extract business insights, identify trends, and understand s
 ---
 
 ## 📂 Project Structure
-01_Create_And_Import_Data.sql  
-02_Data_cleaning.sql  
-03_EDA.sql  
-04_Business_Analysis.sql  
-05_Indexes.sql  
+01_data_import.sql 
+02_data_cleaning.sql
+03_exploratory_analysis.sql
+04_business_insights.sql  
+05_query_optimization.
 
 ---
 
