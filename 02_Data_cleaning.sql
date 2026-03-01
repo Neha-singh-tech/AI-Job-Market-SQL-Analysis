@@ -1,3 +1,9 @@
+-- File: 02_Data_cleaning.sql
+-- Project: AI Job Market SQL Analysis
+-- Description: Cleans raw dataset by handling
+-- null values, removing duplicates, and
+-- standardizing data formats.
+
 use Data_Analyst_Project
 select * from AI_job_market
 
@@ -58,3 +64,4 @@ select * from AI_job_market_cleaned
 --Validate Salary Values
  select * from AI_job_market_cleaned
  where salary_usd <=0
+
