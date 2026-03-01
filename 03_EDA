@@ -1,0 +1,50 @@
+-- 03_eda.sql
+-- Exploratory Data Analysis (EDA) on AI Job Market Dataset
+-- This script analyzes salary trends, job roles, countries,
+-- and work modes to identify patterns and insights.
+
+use Data_Analyst_Project
+select * from AI_job_market_cleaned
+
+---Check Total Records
+ select COUNT(*)from AI_job_market_cleaned
+
+--Check Distinct Job Roles
+ select distinct(job_role)as All_Job_Role from AI_job_market_cleaned
+
+--Salary Statistics (Max,Min,Avg)
+
+ select 
+ max(salary_usd) as Max_Salary, 
+ min(salary_usd) as Min_Salary,
+ AVG(cast(salary_usd as BIGINT)) as Avg_Salary
+ from AI_job_market_cleaned
+
+--Top 10 Highest Paying Jobs
+ select top 10  job_role,salary_usd
+ from AI_job_market_cleaned
+ order by salary_usd DESC 
+
+--Country-wise Average Salary
+ select country,AVG(cast(salary_usd as bigint)) as Avg_Salary
+ from AI_job_market_cleaned
+ group by country
+ order by Avg_salary DESC
+
+ select country,job_role, Avg(cast(salary_usd as bigint)) as Avg_Salary
+ from AI_job_market_cleaned
+ group by country ,job_role
+ order by job_role ,Avg_Salary DESC
+
+ --- Working Mode Distribution
+ select work_mode,count(*) as Total_Jobs
+ from AI_job_market_cleaned
+ group by work_mode
+ order by Total_Jobs DESC
+
+---- Country Wise Work Distribution
+ select country,work_mode,count(*) as Total_Jobs
+ from AI_job_market_cleaned
+ group by country ,work_mode
+ order by work_mode,Total_Jobs DESC
+
