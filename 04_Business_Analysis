@@ -1,0 +1,64 @@
+-- File: 04_Business_Analysis.sql
+-- Project: AI Job Market SQL Analysis
+-- Description: Business-focused analysis to answer
+-- key questions about salary trends, job demand,
+-- country-wise insights, and remote work impact.
+---Which country pays highest salary?
+
+
+--------------------------------------------------Business Analysis--------------------------------------------------------------------
+
+use Data_Analyst_Project
+Select * from AI_job_market_cleaned
+ 
+ select top 1 country,avg(cast(salary_usd as bigint)) as Avg_salary
+ from AI_job_market_cleaned
+ group by country
+ order by Avg_salary DESC
+
+--- CTE To Show ( Highest Salary , Highest Avg Salary , Highest Reomte Jobs  Country Name)
+ With Country_State 
+   as 
+   ( select country,max(Salary_usd) as Max_Salary ,
+     avg(cast(salary_usd as bigint))as Avg_Salary,
+     count(case when work_mode='Remote' then 1 else 0 end ) as Remote_Jobs_Count
+     from AI_job_market_cleaned
+     group by  country
+   ),
+    Ranked as 
+     (select * ,
+       rank() over(order by Max_Salary DESC) as Rank_Max_Salary,
+	   rank() over(order by Avg_Salary DESC) as Rank_Avg_Salary,
+	   rank() over(order by Remote_Jobs_Count DESC) as Rank_High_RemoteJobs
+       from Country_State
+    )
+      select * from Ranked
+       where Rank_Max_Salary =1
+          or Rank_Avg_Salary =1
+          or Rank_High_RemoteJobs = 1
+
+
+--- Country Wise highest Paying Job Role
+  With Ranked_Roles
+  as(
+      select Country,job_role,salary_usd,
+             ROW_NUMBER() over(partition by country 
+			 order by Salary_usd DESC) as Salary_Rank 
+             from AI_job_market_cleaned
+      )
+	  
+   select * from Ranked_Roles
+   where Salary_Rank = 1
+    or Salary_Rank = 2
+   
+
+--Average Salary by Work Mode Comparsion
+  select work_mode,AVG(cast(salary_usd as bigint))as Avg_Salry
+  from AI_job_market_cleaned
+  Group by work_mode
+  order by Avg_Salry DESC
+
+--Average Salary by Work Mode Comparsion Country wise
+  select country,work_mode,AVG(cast(salary_usd as bigint))as Avg_Salry
+  from AI_job_market_cleaned
+  Group by country,work_mode
