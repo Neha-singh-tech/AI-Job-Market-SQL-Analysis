@@ -3,29 +3,6 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 ![Made By](https://img.shields.io/badge/Made%20By-Neha%20Singh-purple)
 
-# 📊 AI Job Market SQL Analysis
-
-## 📌 Project Overview
-This project analyzes an AI job market dataset using SQL.
-The objective is to extract business insights, identify trends, and understand salary patterns country wise in the AI industry.
-
----
-
-## 🛠 Tools Used
-- SQL Server
-- Excel
-- GitHub
-
----
-
-## 📂 Project Structure
-01_data_import.sql 
-02_data_cleaning.sql
-03_exploratory_analysis.sql
-04_business_insights.sql  
-05_query_optimization.
-
----
 # 🤖 AI Job Market SQL Analysis  
 
 <p align="center">
@@ -79,6 +56,14 @@ The analysis includes data cleaning, exploratory data analysis (EDA), business i
 
 ---
 
+## 📂 Project Structure
+01_data_import.sql 
+02_data_cleaning.sql
+03_exploratory_analysis.sql
+04_business_insights.sql  
+05_query_optimization.
+
+---
 ## 📈 Key Insights
 - Identified top-paying AI roles
 - Analyzed most in-demand skills
