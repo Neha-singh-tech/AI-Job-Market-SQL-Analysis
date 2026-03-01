@@ -1,3 +1,9 @@
+-- File: 01_Create_And_Import_Data.sql
+-- Project: AI Job Market SQL Analysis
+-- Description: Creates database/table structure
+-- and imports AI job market dataset from CSV file.
+
+
 use Data_Analyst_Project
 CREATE TABLE AI_job_market (
     id INT PRIMARY KEY,
@@ -51,3 +57,4 @@ FROM 'C:\Users\Radhika Neha\Downloads\global_ai_jobs.csv'
     ROWTERMINATOR = '\n',
     TABLOCK
      );
+
