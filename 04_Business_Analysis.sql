@@ -1,3 +1,10 @@
+-- File: 04_Business_Analysis.sql
+-- Project: AI Job Market SQL Analysis
+-- Description: Business-focused analysis to answer
+-- key questions about salary trends, job demand,
+-- country-wise insights, and remote work impact.
+
+
 use Data_Analyst_Project
 Select * from AI_job_market_cleaned
 
@@ -57,3 +64,4 @@ Select * from AI_job_market_cleaned
   select country,work_mode,AVG(cast(salary_usd as bigint))as Avg_Salry
   from AI_job_market_cleaned
   Group by country,work_mode
+
